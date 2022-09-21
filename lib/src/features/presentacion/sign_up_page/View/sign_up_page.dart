@@ -1,0 +1,176 @@
+import 'package:agachaditos_app/colors/colors.dart';
+import 'package:agachaditos_app/src/features/presentacion/commons_widgets/back_button.dart';
+import 'package:flutter/material.dart';
+
+class SignUp extends StatelessWidget {
+  const SignUp({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+        elevation: 0.0,
+        leading: Builder(builder: (BuildContext context) {
+          return backButton(context, Colors.black);
+        }),
+      ),
+      body: Center(
+        child: Container(
+          padding: EdgeInsets.all(30.0),
+          child: Column(
+            children: [
+              Text(
+                'Create an account',
+                style: TextStyle(
+                    color: Theme.of(context).primaryColor,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 30.0),
+              ),
+              _usernameInput(context),
+              _emailInput(context),
+              _phoneInput(context),
+              _dateInput(context),
+              _passwordInput(context),
+              _sendButtonSignUp(context),
+              Container(
+                padding:  const  EdgeInsets.symmetric(horizontal: 30.0, vertical: 30.0),
+                child: const
+                Text(
+                  'By clicking Sign up you agree to the following Terms and Conditions without reservation',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontWeight: FontWeight.w400,
+                    fontSize: 13.0
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+Widget _usernameInput(BuildContext context){
+  return Container(
+    margin: EdgeInsets.only(top: 40.0),
+    padding: EdgeInsets.only(left: 20.0),
+    decoration: BoxDecoration(
+      color:bgInputs,
+      borderRadius: BorderRadius.circular(30.0)
+    ),
+      child: const  TextField(
+        keyboardType: TextInputType.text,
+        decoration: InputDecoration(
+          hintText: 'Username',
+          border: OutlineInputBorder(
+            borderSide: BorderSide.none
+          )
+        ),
+      ),
+  );
+}
+Widget _emailInput(BuildContext context){
+  return Container(
+    margin: EdgeInsets.only(top: 15.0),
+    padding: EdgeInsets.only(left: 20.0),
+    decoration: BoxDecoration(
+        color:bgInputs,
+        borderRadius: BorderRadius.circular(30.0)
+    ),
+    child: const  TextField(
+      keyboardType: TextInputType.emailAddress,
+      decoration: InputDecoration(
+          hintText: 'Email',
+          border: OutlineInputBorder(
+              borderSide: BorderSide.none
+          )
+      ),
+    ),
+  );
+}
+Widget _phoneInput(BuildContext context){
+  return Container(
+    margin: EdgeInsets.only(top: 15.0),
+    padding: EdgeInsets.only(left: 20.0),
+    decoration: BoxDecoration(
+        color:bgInputs,
+        borderRadius: BorderRadius.circular(30.0)
+    ),
+    child: const  TextField(
+      keyboardType: TextInputType.number,
+      decoration: InputDecoration(
+          hintText: 'Phone',
+          border: OutlineInputBorder(
+              borderSide: BorderSide.none
+          )
+      ),
+    ),
+  );
+}
+Widget _dateInput(BuildContext context){
+  return Container(
+    margin: EdgeInsets.only(top: 15.0),
+    padding: EdgeInsets.only(left: 20.0),
+    decoration: BoxDecoration(
+        color:bgInputs,
+        borderRadius: BorderRadius.circular(30.0)
+    ),
+    child: const  TextField(
+      keyboardType: TextInputType.datetime,
+      decoration: InputDecoration(
+          hintText: 'Date of birth',
+          border: OutlineInputBorder(
+              borderSide: BorderSide.none
+          )
+      ),
+    ),
+  );
+}
+Widget _passwordInput(BuildContext context){
+  return Container(
+    margin: EdgeInsets.only(top: 15.0),
+    padding: EdgeInsets.only(left: 20.0),
+    decoration: BoxDecoration(
+        color:bgInputs,
+        borderRadius: BorderRadius.circular(30.0)
+    ),
+    child: const  TextField(
+      obscureText: true,
+      keyboardType: TextInputType.text,
+      decoration: InputDecoration(
+          hintText: 'Password',
+          border: OutlineInputBorder(
+              borderSide: BorderSide.none
+          )
+      ),
+    ),
+  );
+}
+Widget _sendButtonSignUp(BuildContext context){
+  return Container(
+    width: 400.0,
+    height: 50.0,
+    margin: EdgeInsets.only(top: 10.0),
+    child: ElevatedButton(
+      onPressed: () {
+      },
+      style: ButtonStyle(
+        backgroundColor: MaterialStateProperty.all(
+          Theme.of(context).colorScheme.secondary
+        ),
+        shape: MaterialStateProperty.all(
+          RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(30.0)
+          )
+        )
+      ),
+      child: const  Text(
+        'Sign Up'
+      ),
+    ),
+  );
+}
