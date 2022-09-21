@@ -1,7 +1,8 @@
 import 'dart:ui';
-
-import 'package:agachaditos_app/main.dart';
 import 'package:flutter/material.dart';
+//Color
+import 'package:agachaditos_app/colors/colors.dart';
+import 'package:agachaditos_app/src/features/presentacion/commons_widgets/rounder_button.dart';
 import 'package:flutter/services.dart';
 
 class WelcomePage extends StatelessWidget {
@@ -10,15 +11,12 @@ class WelcomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     SystemChrome.setSystemUIOverlayStyle(
-        SystemUiOverlayStyle.light.copyWith(
-            statusBarColor: Colors.white
-        )
-    );
+        SystemUiOverlayStyle.light.copyWith(statusBarColor: Colors.white));
     return Scaffold(
         body: Stack(
       children: [
         Container(
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
               image: DecorationImage(
                   image: NetworkImage(
                       'https://res.cloudinary.com/developments/image/upload/v1655143979/App_Agachaditos/220411_r40201_nhyomv.jpg'),
@@ -32,7 +30,7 @@ class WelcomePage extends StatelessWidget {
         ),
         Column(mainAxisAlignment: MainAxisAlignment.center, children: [
           Container(
-            padding: EdgeInsets.symmetric(horizontal: 50.0),
+            padding: const EdgeInsets.symmetric(horizontal: 50.0),
             child: const Text(
               'DELIVERED FAST FOOD TO YOUR DOOR',
               style: TextStyle(
@@ -42,7 +40,8 @@ class WelcomePage extends StatelessWidget {
             ),
           ),
           Container(
-            padding: EdgeInsets.symmetric(horizontal: 50.0, vertical: 30.0),
+            padding:
+                const EdgeInsets.symmetric(horizontal: 50.0, vertical: 30.0),
             child: const Text(
               'Set exact location to find the right restaurants near you.',
               style: TextStyle(
@@ -51,46 +50,21 @@ class WelcomePage extends StatelessWidget {
                   fontSize: 17.0),
             ),
           ),
-          Container(
-            width: 350.0,
-            height: 45.0,
-            child: RaisedButton(
-              onPressed: () {
-
-                Navigator.pushNamed( context, 'login' );
-              },
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(20.0)),
-              color: Theme.of(context).accentColor,
-              child: const Text('Log in'),
-            ),
-          ),
-          Container(
-            margin: EdgeInsets.only(top: 20.0),
-            width: 350.0,
-            height: 45.0,
-            child: RaisedButton(
-                onPressed: () {},
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(20.0)),
-                color: Theme.of(context).buttonColor,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Icon(
-                      Icons.facebook,
-                      color: Colors.white,
-                    ),
-                    Container(
-                      margin: EdgeInsets.only(left: 10),
-                      child: Text(
-                        'Connect with facebook',
-                        style: TextStyle(color: Colors.white, fontSize: 15.0),
-                      ),
-                    ),
-                  ],
-                )),
-          ),
+          rounderButton(
+              color: redColorPrimary,
+              labelButton: 'Log in',
+              func: () {
+                Navigator.pushNamed(context, 'login');
+              }),
+          rounderButton(
+              isWithIcon: true,
+              icon: AssetImage("assets/icons/facebook.png"),
+              color: colorfacebook,
+              labelButton: 'Connect with facebook',
+              func: () {
+                Navigator.pushNamed(context, 'login');
+              }
+              )
         ]),
       ],
     ));
