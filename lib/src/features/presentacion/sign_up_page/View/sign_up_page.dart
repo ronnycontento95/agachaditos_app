@@ -1,5 +1,6 @@
 import 'package:agachaditos_app/colors/colors.dart';
 import 'package:agachaditos_app/src/features/presentacion/commons_widgets/back_button.dart';
+import 'package:agachaditos_app/src/features/presentacion/commons_widgets/rounder_button.dart';
 import 'package:flutter/material.dart';
 
 class SignUp extends StatelessWidget {
@@ -23,7 +24,7 @@ class SignUp extends StatelessWidget {
               Text(
                 'Create an account',
                 style: TextStyle(
-                    color: Theme.of(context).primaryColor,
+                    color: primaryColor,
                     fontWeight: FontWeight.bold,
                     fontSize: 30.0),
               ),
@@ -32,7 +33,9 @@ class SignUp extends StatelessWidget {
               _phoneInput(context),
               _dateInput(context),
               _passwordInput(context),
-              _sendButtonSignUp(context),
+             rounderButton(color: redColorPrimary, labelButton: 'Sing Up', func: (){
+              Navigator.pushNamed(context, 'login');
+             }),
               Container(
                 padding:  const  EdgeInsets.symmetric(horizontal: 30.0, vertical: 30.0),
                 child: const
@@ -56,10 +59,10 @@ class SignUp extends StatelessWidget {
 
 Widget _usernameInput(BuildContext context){
   return Container(
-    margin: EdgeInsets.only(top: 40.0),
-    padding: EdgeInsets.only(left: 20.0),
+    margin: const  EdgeInsets.only(top: 40.0),
+    padding: const EdgeInsets.only(left: 20.0),
     decoration: BoxDecoration(
-      color:bgInputs,
+      color: gris,
       borderRadius: BorderRadius.circular(30.0)
     ),
       child: const  TextField(
@@ -78,7 +81,7 @@ Widget _emailInput(BuildContext context){
     margin: EdgeInsets.only(top: 15.0),
     padding: EdgeInsets.only(left: 20.0),
     decoration: BoxDecoration(
-        color:bgInputs,
+        color:gris,
         borderRadius: BorderRadius.circular(30.0)
     ),
     child: const  TextField(
@@ -97,7 +100,7 @@ Widget _phoneInput(BuildContext context){
     margin: EdgeInsets.only(top: 15.0),
     padding: EdgeInsets.only(left: 20.0),
     decoration: BoxDecoration(
-        color:bgInputs,
+        color:gris,
         borderRadius: BorderRadius.circular(30.0)
     ),
     child: const  TextField(
@@ -116,7 +119,7 @@ Widget _dateInput(BuildContext context){
     margin: EdgeInsets.only(top: 15.0),
     padding: EdgeInsets.only(left: 20.0),
     decoration: BoxDecoration(
-        color:bgInputs,
+        color:gris,
         borderRadius: BorderRadius.circular(30.0)
     ),
     child: const  TextField(
@@ -135,7 +138,7 @@ Widget _passwordInput(BuildContext context){
     margin: EdgeInsets.only(top: 15.0),
     padding: EdgeInsets.only(left: 20.0),
     decoration: BoxDecoration(
-        color:bgInputs,
+        color:gris,
         borderRadius: BorderRadius.circular(30.0)
     ),
     child: const  TextField(
@@ -146,30 +149,6 @@ Widget _passwordInput(BuildContext context){
           border: OutlineInputBorder(
               borderSide: BorderSide.none
           )
-      ),
-    ),
-  );
-}
-Widget _sendButtonSignUp(BuildContext context){
-  return Container(
-    width: 400.0,
-    height: 50.0,
-    margin: EdgeInsets.only(top: 10.0),
-    child: ElevatedButton(
-      onPressed: () {
-      },
-      style: ButtonStyle(
-        backgroundColor: MaterialStateProperty.all(
-          Theme.of(context).colorScheme.secondary
-        ),
-        shape: MaterialStateProperty.all(
-          RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(30.0)
-          )
-        )
-      ),
-      child: const  Text(
-        'Sign Up'
       ),
     ),
   );

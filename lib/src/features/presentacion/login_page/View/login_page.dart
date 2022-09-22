@@ -1,4 +1,5 @@
 import 'package:agachaditos_app/src/features/presentacion/commons_widgets/back_button.dart';
+import 'package:agachaditos_app/src/features/presentacion/commons_widgets/rounder_button.dart';
 import 'package:flutter/material.dart';
 //UI
 import 'package:flutter/services.dart';
@@ -49,7 +50,7 @@ class LoginPage extends StatelessWidget {
                       Text(
                         'Welcome Back',
                         style: TextStyle(
-                          color: Theme.of(context).primaryColor,
+                          color: primaryColor,
                           fontSize: 30.0,
                           fontWeight: FontWeight.bold,
                         ),
@@ -57,19 +58,21 @@ class LoginPage extends StatelessWidget {
                       Text(
                         'Login to you account',
                         style: TextStyle(
-                          color: redColorPrimary,
+                          color: gris,
                           fontSize: 15.0,
                           fontWeight: FontWeight.w500,
                         ),
                       ),
                       _emailInput(),
                       _passwordInput(),
-                      _buttonLogin(context),
+                        rounderButton(color: redColorPrimary, labelButton: 'Log  in', func: (){
+                          Navigator.pushNamed(context, 'tabs');
+                        }),
                       Container(
                         margin: const  EdgeInsets.only(top: 30.0),
                         child: GestureDetector(
                           onTap: (){
-                            Navigator.pushNamed(context, 'forgotpassword');
+                            Navigator.pushNamed(context, 'fortgot-password');
                           },
                           child: const Text(
                             'Forgot you password?',
@@ -101,7 +104,7 @@ class LoginPage extends StatelessWidget {
                                 child: Text(
                                   'Sighn up?',
                                   style: TextStyle(
-                                      color: Theme.of(context).accentColor,
+                                      color:redColorPrimary,
                                       fontWeight: FontWeight.w400,
                                       fontSize: 15.0),
                                 ),
@@ -154,21 +157,3 @@ Widget _passwordInput() {
   );
 }
 
-Widget _buttonLogin(BuildContext context) {
-  return Container(
-    width: 450.0,
-    height: 55.0,
-    margin: const  EdgeInsets.only(top: 15.0),
-    child: RaisedButton(
-      onPressed: () {
-        Navigator.pushNamed(context, 'tabs');
-      },
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30.0)),
-      color: Theme.of(context).colorScheme.secondary,
-      child: const Text(
-        'Log in',
-        style: TextStyle(color: Colors.white, fontSize: 17.0),
-      ),
-    ),
-  );
-}
