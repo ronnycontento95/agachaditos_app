@@ -1,7 +1,7 @@
 
 
 import 'package:agachaditos_app/colors/colors.dart';
-import 'package:agachaditos_app/src/features/presentacion/commons_widgets/header_text.dart';
+import 'package:agachaditos_app/src/features/presentacion/commons_widgets/Headers/header_text.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
 

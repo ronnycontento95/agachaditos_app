@@ -2,7 +2,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 //Color
 import 'package:agachaditos_app/colors/colors.dart';
-import 'package:agachaditos_app/src/features/presentacion/commons_widgets/rounder_button.dart';
+import 'package:agachaditos_app/src/features/presentacion/commons_widgets/Buttons/rounder_button.dart';
 import 'package:flutter/services.dart';
 
 class WelcomePage extends StatelessWidget {

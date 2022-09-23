@@ -1,11 +1,11 @@
-import 'package:agachaditos_app/src/features/presentacion/commons_widgets/card_vertical.dart';
-import 'package:agachaditos_app/src/features/presentacion/commons_widgets/header_double.dart';
-import 'package:agachaditos_app/src/features/presentacion/commons_widgets/populares_card.dart';
+import 'package:agachaditos_app/src/features/presentacion/commons_widgets/Cards/vertical_card.dart';
+import 'package:agachaditos_app/src/features/presentacion/commons_widgets/Headers/header_double.dart';
+import 'package:agachaditos_app/src/features/presentacion/commons_widgets/Cards/populares_card.dart';
 import 'package:flutter/material.dart';
 //Color
 import 'package:agachaditos_app/colors/colors.dart';
 //Communc Widget
-import 'package:agachaditos_app/src/features/presentacion/commons_widgets/header_text.dart';
+import 'package:agachaditos_app/src/features/presentacion/commons_widgets/Headers/header_text.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
 
 class SearchPage extends StatelessWidget {

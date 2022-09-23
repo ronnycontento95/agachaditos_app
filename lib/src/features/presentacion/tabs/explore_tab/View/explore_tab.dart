@@ -1,5 +1,5 @@
-import 'package:agachaditos_app/src/features/presentacion/commons_widgets/header_text.dart';
-import 'package:agachaditos_app/src/features/presentacion/commons_widgets/populares_card.dart';
+import 'package:agachaditos_app/src/features/presentacion/commons_widgets/Headers/header_text.dart';
+import 'package:agachaditos_app/src/features/presentacion/commons_widgets/Cards/populares_card.dart';
 import 'package:flutter/material.dart';
 //Color
 import 'package:agachaditos_app/colors/colors.dart';
@@ -29,7 +29,9 @@ class ExploreTab extends StatelessWidget {
                         color: primaryColor,
                         fontSize: 30.0)),
                 _sliderCards(),
-                _headers(context, 'Popular this Week', 'Show All'),
+                GestureDetector(
+                    onTap: () => Navigator.pushNamed(context, 'collections'),
+                    child: _headers(context, 'Popular this Week', 'Show All')),
                 popularesCard(
                     context: context,
                     image: NetworkImage(
@@ -60,7 +62,10 @@ class ExploreTab extends StatelessWidget {
                     ratings: "(233 ratings)",
                     buttonText: 'Delivery',
                     hasActionbutton: true),
-                _headers(context, 'Collections', 'Show all'),
+                GestureDetector(
+                    onTap: () { Navigator.pushNamed(context, 'collections');
+                    } ,
+                    child: _headers(context, 'Collections', 'Show all')),
                 _sliderCollections(),
               ],
             ),
@@ -76,7 +81,7 @@ class ExploreTab extends StatelessWidget {
         GestureDetector(
           onTap: () => Navigator.pushNamed(context, 'search'),
           child: Container(
-            width: 320,
+            width: 300,
             padding: const EdgeInsets.all(10.0),
             margin: const EdgeInsets.only(left: 5),
             decoration: BoxDecoration(
@@ -107,7 +112,9 @@ class ExploreTab extends StatelessWidget {
                 size: 30,
                 color: Colors.white,
               ),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pushNamed(context, 'filter');
+              },
             ))
       ],
     );
