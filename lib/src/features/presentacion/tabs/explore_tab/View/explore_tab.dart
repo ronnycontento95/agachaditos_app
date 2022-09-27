@@ -141,86 +141,91 @@ class ExploreTab extends StatelessWidget {
 
   //Targeta
   Widget _targeta(BuildContext context) {
-    return Container(
-      margin: const EdgeInsets.all(5.0),
-      child: Column(
-        children: [
-          ClipRRect(
-            borderRadius: BorderRadius.circular(20.0),
-            child: const Image(
-              width: 210.0,
-              height: 250.0,
-              fit: BoxFit.cover,
-              image: NetworkImage(
-                  'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Zm9vZHxlbnwwfDF8MHx8&auto=format&fit=crop&w=500&q=60'),
+    return GestureDetector(
+      onTap: (){
+        Navigator.pushNamed(context, 'place-detail');
+      },
+      child: Container(
+        margin: const EdgeInsets.all(5.0),
+        child: Column(
+          children: [
+            ClipRRect(
+              borderRadius: BorderRadius.circular(20.0),
+              child: const Image(
+                width: 210.0,
+                height: 250.0,
+                fit: BoxFit.cover,
+                image: NetworkImage(
+                    'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Zm9vZHxlbnwwfDF8MHx8&auto=format&fit=crop&w=500&q=60'),
+              ),
             ),
-          ),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              const Text(
-                "Andy & Cindy's Dinner",
-                style: TextStyle(
-                    color: Colors.black,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 17.0),
-              ),
-              Container(
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  "87 Botsford Circle Apt",
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const Text(
+                  "Andy & Cindy's Dinner",
                   style: TextStyle(
-                      color: Theme.of(context).disabledColor,
-                      fontWeight: FontWeight.w600,
-                      fontSize: 13.0),
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 17.0),
                 ),
-              ),
-              Row(
-                children: [
-                  const Icon(
-                    Icons.star,
-                    color: Colors.yellow,
-                    size: 16,
-                  ),
-                  const Text(
-                    "4.8",
+                Container(
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    "87 Botsford Circle Apt",
                     style: TextStyle(
-                        color: Colors.black,
-                        fontWeight: FontWeight.w500,
-                        fontSize: 13.0),
-                  ),
-                  Text(
-                    "233 ratings",
-                    style: TextStyle(
-                        color: gris,
+                        color: Theme.of(context).disabledColor,
                         fontWeight: FontWeight.w600,
                         fontSize: 13.0),
                   ),
-                  Container(
-                    margin: const EdgeInsets.symmetric(horizontal: 5.0),
-                    height: 18.0,
-                    width: 80.0,
-                    child: ElevatedButton(
-                      style: ButtonStyle(
-                          backgroundColor:
-                              MaterialStateProperty.all(redColorPrimary),
-                          shape: MaterialStateProperty.all(
-                              RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(20.0)))),
-                      onPressed: () {},
-                      child: const Text(
-                        'Delivery',
-                        style: TextStyle(
-                          fontSize: 11.0,
+                ),
+                Row(
+                  children: [
+                    const Icon(
+                      Icons.star,
+                      color: Colors.yellow,
+                      size: 16,
+                    ),
+                    const Text(
+                      "4.8",
+                      style: TextStyle(
+                          color: Colors.black,
+                          fontWeight: FontWeight.w500,
+                          fontSize: 13.0),
+                    ),
+                    Text(
+                      "233 ratings",
+                      style: TextStyle(
+                          color: gris,
+                          fontWeight: FontWeight.w600,
+                          fontSize: 13.0),
+                    ),
+                    Container(
+                      margin: const EdgeInsets.symmetric(horizontal: 5.0),
+                      height: 18.0,
+                      width: 80.0,
+                      child: ElevatedButton(
+                        style: ButtonStyle(
+                            backgroundColor:
+                                MaterialStateProperty.all(redColorPrimary),
+                            shape: MaterialStateProperty.all(
+                                RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(20.0)))),
+                        onPressed: () {},
+                        child: const Text(
+                          'Delivery',
+                          style: TextStyle(
+                            fontSize: 11.0,
+                          ),
                         ),
                       ),
-                    ),
-                  )
-                ],
-              )
-            ],
-          )
-        ],
+                    )
+                  ],
+                )
+              ],
+            )
+          ],
+        ),
       ),
     );
   }

@@ -36,7 +36,7 @@ Widget favouriteCard(
               blurRadius: 10.0)
         ]),
     child: Row(
-      
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
         Container(
           margin: const EdgeInsets.only(left: 10),
@@ -59,7 +59,7 @@ Widget favouriteCard(
               Row(
                 children: [
                   Container(
-                      margin: const EdgeInsets.symmetric(vertical: 7.0),
+                      // margin: const EdgeInsets.symmetric(vertical: 7.0),
                       child: headerText(
                           texto: title,
                           color: Colors.black,
