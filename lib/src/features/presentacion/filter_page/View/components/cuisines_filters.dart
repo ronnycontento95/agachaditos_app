@@ -1,4 +1,4 @@
-import 'package:agachaditos_app/colors/colors.dart';
+import 'package:agachaditos_app/src/colors/colors.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -22,9 +22,11 @@ class _CuisinesFilterState extends State<CuisinesFilter> {
   @override
   Widget build(BuildContext context) {
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
+        Wrap(
+          direction: Axis.horizontal,
+          alignment: WrapAlignment.start,
           children: [
             _roundedButtonFilter(() {
               setState(() => btnAmerican = !btnAmerican);
@@ -38,11 +40,6 @@ class _CuisinesFilterState extends State<CuisinesFilter> {
             _roundedButtonFilter(() {
               setState(() => btnPizza = !btnPizza);
             }, btnPizza, 'Pizza'),
-          ],
-        ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: [
             _roundedButtonFilter(() {
               setState(() => btnDesserts = !btnDesserts);
             }, btnDesserts, 'Desserts'),

@@ -1,6 +1,6 @@
-import 'package:agachaditos_app/colors/colors.dart';
+import 'package:agachaditos_app/src/colors/colors.dart';
 import 'package:agachaditos_app/src/features/presentacion/commons_widgets/Headers/header_text.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:agachaditos_app/src/utils/styles/box_decoration_shadows.dart';
 import 'package:flutter/material.dart';
 
 Widget favouriteCard(
@@ -26,15 +26,7 @@ Widget favouriteCard(
     ),
     padding: const EdgeInsets.only(top: 10, bottom: 10),
     width: double.infinity,
-    decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(10),
-        color: Colors.white,
-        boxShadow: [
-          BoxShadow(
-              color: Color.fromRGBO(210, 211, 215, 1.0),
-              offset: Offset(0, 5),
-              blurRadius: 10.0)
-        ]),
+    decoration: createBoxDecorationWithShadows(),
     child: Row(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [

@@ -2,7 +2,7 @@ import 'package:agachaditos_app/src/features/presentacion/commons_widgets/Header
 import 'package:agachaditos_app/src/features/presentacion/tabs/my_order_tab/View/components/emply_view.dart';
 import 'package:flutter/material.dart';
 // Colors
-import 'package:agachaditos_app/colors/colors.dart';
+import 'package:agachaditos_app/src/colors/colors.dart';
 
 class MyOrderTab extends StatefulWidget {
   const MyOrderTab({Key? key}) : super(key: key);

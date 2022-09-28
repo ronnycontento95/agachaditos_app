@@ -1,10 +1,13 @@
-import 'package:agachaditos_app/colors/colors.dart';
+import 'package:flutter/material.dart';
+//Routes
+import 'package:agachaditos_app/src/routes.dart';
+//Colors
+import 'package:agachaditos_app/src/colors/colors.dart';
+//Commons Widgets
 import 'package:agachaditos_app/src/features/presentacion/commons_widgets/Alets/alert_dialog.dart';
 import 'package:agachaditos_app/src/features/presentacion/commons_widgets/BackButons/back_button.dart';
 import 'package:agachaditos_app/src/features/presentacion/commons_widgets/Headers/header_text.dart';
-import 'package:agachaditos_app/src/features/presentacion/commons_widgets/Buttons/rounder_button.dart';
-import 'package:agachaditos_app/src/routes.dart';
-import 'package:flutter/material.dart';
+import 'package:agachaditos_app/src/features/presentacion/commons_widgets/Buttons/create_button.dart';
 
 class ForgotPassword extends StatelessWidget {
   const ForgotPassword({Key? key}) : super(key: key);
@@ -44,7 +47,7 @@ class ForgotPassword extends StatelessWidget {
                 ),
               ),
               _emailInput(),
-              rounderButton(
+              createButton(
                   context: context,
                   color: redColorPrimary,
                   labelButton: 'Send',
@@ -81,7 +84,7 @@ void _showAlert(BuildContext context) {
       AssetImage('assets/icons/lock.png'),
       "Your password has been reset",
       "'You'll shortle receive an email with a code to setup a new password ",
-      rounderButton(color: redColorPrimary, labelButton: 'Done', func: () {
+      createButton(color: redColorPrimary, labelButton: 'Done', func: () {
         Navigator.pushNamed(context, 'login');
       }));
 }

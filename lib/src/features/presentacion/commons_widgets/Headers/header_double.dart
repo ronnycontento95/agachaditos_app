@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:agachaditos_app/colors/colors.dart';
+import 'package:agachaditos_app/src/colors/colors.dart';
 import 'package:agachaditos_app/src/features/presentacion/commons_widgets/Headers/header_text.dart';
 
 

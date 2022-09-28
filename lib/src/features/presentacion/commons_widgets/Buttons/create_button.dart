@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-Widget rounderButton({
+Widget createButton({
   BuildContext? context,
   double width = 350.0,
   double height = 45.0,

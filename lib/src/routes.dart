@@ -1,4 +1,5 @@
 import 'package:agachaditos_app/src/features/presentacion/place_deatil_page/View/place_detail_page.dart';
+import 'package:agachaditos_app/src/features/presentacion/profile_detail_page/view/profile_detail_page.dart';
 import 'package:flutter/material.dart';
 import 'package:agachaditos_app/src/features/presentacion/tabs/tabs_page.dart';
 import 'package:agachaditos_app/src/features/presentacion/welcome_page/View/welcome_page.dart';
@@ -22,4 +23,6 @@ final routes = <String, WidgetBuilder> {
   'collections' : (BuildContext context) => CollectionsPage(),
   'collectionsdetail' : (BuildContext context) => CollectionDetailPage(),
   'place-detail' : (BuildContext context) => PlaceDetailPage(),
+  'profile-detail' : (BuildContext context) => ProfileDetailPage(),
+
 };

@@ -1,11 +1,11 @@
-import 'package:agachaditos_app/src/features/presentacion/filter_page/View/customsWidgets/list_title_checked.dart';
-import 'package:agachaditos_app/src/features/presentacion/filter_page/View/customsWidgets/price_filter.dart';
 import 'package:flutter/material.dart';
 //Colors
-import 'package:agachaditos_app/colors/colors.dart';
+import 'package:agachaditos_app/src/colors/colors.dart';
 //Communc
+import 'package:agachaditos_app/src/features/presentacion/filter_page/View/components/list_title_checked.dart';
+import 'package:agachaditos_app/src/features/presentacion/filter_page/View/components/price_filter.dart';
 import 'package:agachaditos_app/src/features/presentacion/commons_widgets/Headers/header_text.dart';
-import 'package:agachaditos_app/src/features/presentacion/filter_page/View/customsWidgets/cuisines_filters.dart';
+import 'package:agachaditos_app/src/features/presentacion/filter_page/View/components/cuisines_filters.dart';
 
 class FilterPage extends StatefulWidget {
   const FilterPage({Key? key}) : super(key: key);
@@ -51,7 +51,7 @@ class _FilterPageState extends State<FilterPage> {
               Navigator.pop(context);
             },
             child: Container(
-              padding: const EdgeInsets.only(top: 20, left: 7.0),
+              padding: const EdgeInsets.only(top: 20, left: 7.0, right: 20),
               child: headerText(
                   texto: 'Done',
                   color: redColorPrimary,

@@ -1,4 +1,4 @@
-import 'package:agachaditos_app/colors/colors.dart';
+import 'package:agachaditos_app/src/colors/colors.dart';
 import 'package:agachaditos_app/src/features/presentacion/commons_widgets/Alets/alert_dialog.dart';
 import 'package:agachaditos_app/src/features/presentacion/tabs/explore_tab/View/explore_tab.dart';
 import 'package:agachaditos_app/src/features/presentacion/tabs/favorite_tab/View/favorite_tab.dart';

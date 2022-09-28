@@ -1,6 +1,6 @@
-import 'package:agachaditos_app/colors/colors.dart';
+import 'package:agachaditos_app/src/colors/colors.dart';
 import 'package:agachaditos_app/src/features/presentacion/commons_widgets/BackButons/back_button.dart';
-import 'package:agachaditos_app/src/features/presentacion/commons_widgets/Buttons/rounder_button.dart';
+import 'package:agachaditos_app/src/features/presentacion/commons_widgets/Buttons/create_button.dart';
 import 'package:flutter/material.dart';
 
 class SignUp extends StatelessWidget {
@@ -33,7 +33,7 @@ class SignUp extends StatelessWidget {
               _phoneInput(context),
               _dateInput(context),
               _passwordInput(context),
-             rounderButton(color: redColorPrimary, labelButton: 'Sing Up', func: (){
+             createButton(color: redColorPrimary, labelButton: 'Sing Up', func: (){
               Navigator.pushNamed(context, 'login');
              }),
               Container(

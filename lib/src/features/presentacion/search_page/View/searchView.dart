@@ -3,7 +3,7 @@ import 'package:agachaditos_app/src/features/presentacion/commons_widgets/Header
 import 'package:agachaditos_app/src/features/presentacion/commons_widgets/Cards/populares_card.dart';
 import 'package:flutter/material.dart';
 //Color
-import 'package:agachaditos_app/colors/colors.dart';
+import 'package:agachaditos_app/src/colors/colors.dart';
 //Communc Widget
 import 'package:agachaditos_app/src/features/presentacion/commons_widgets/Headers/header_text.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';

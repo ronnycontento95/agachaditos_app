@@ -1,8 +1,8 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
 //Color
-import 'package:agachaditos_app/colors/colors.dart';
-import 'package:agachaditos_app/src/features/presentacion/commons_widgets/Buttons/rounder_button.dart';
+import 'package:agachaditos_app/src/colors/colors.dart';
+import 'package:agachaditos_app/src/features/presentacion/commons_widgets/Buttons/create_button.dart';
 import 'package:flutter/services.dart';
 
 class WelcomePage extends StatelessWidget {
@@ -50,13 +50,13 @@ class WelcomePage extends StatelessWidget {
                   fontSize: 17.0),
             ),
           ),
-          rounderButton(
+          createButton(
               color: redColorPrimary,
               labelButton: 'Log in',
               func: () {
                 Navigator.pushNamed(context, 'login');
               }),
-          rounderButton(
+          createButton(
               isWithIcon: true,
               icon: AssetImage("assets/icons/facebook.png"),
               color: colorfacebook,

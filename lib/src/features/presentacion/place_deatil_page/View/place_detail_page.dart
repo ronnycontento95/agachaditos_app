@@ -1,4 +1,4 @@
-import 'package:agachaditos_app/colors/colors.dart';
+import 'package:agachaditos_app/src/colors/colors.dart';
 import 'package:agachaditos_app/src/features/presentacion/commons_widgets/BackButons/back_button.dart';
 import 'package:agachaditos_app/src/features/presentacion/commons_widgets/Headers/header_double.dart';
 import 'package:agachaditos_app/src/features/presentacion/commons_widgets/Headers/header_text.dart';
@@ -29,7 +29,7 @@ class PlaceDetailPage extends StatelessWidget {
         slivers: [
           SliverAppBar(
             backgroundColor: redColorPrimary,
-            expandedHeight: 420,
+            expandedHeight: 320,
             flexibleSpace: FlexibleSpaceBar(
               background: Stack(
                 children: [

@@ -1,4 +1,4 @@
-import 'package:agachaditos_app/colors/colors.dart';
+import 'package:agachaditos_app/src/colors/colors.dart';
 import 'package:agachaditos_app/src/features/presentacion/commons_widgets/Headers/header_text.dart';
 import 'package:flutter/material.dart';
 
@@ -14,7 +14,12 @@ class _ProfileTabState extends State<ProfileTab> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(
-        children: [_header(), _contentProfile()],
+        children: [
+          GestureDetector(
+              onTap: () => Navigator.pushNamed(context, 'profile-detail'),
+              child: _header()),
+          _contentProfile()
+        ],
       ),
     );
   }
@@ -84,8 +89,6 @@ Widget _header() {
 
 Widget _contentProfile() {
   return Container(
-      
-      // padding: const EdgeInsets.symmetric(vertical: 0, horizontal: 0),
       padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
       child: Column(
         children: [
