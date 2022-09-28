@@ -48,14 +48,12 @@ Widget popularesCard({
                             texto: title,
                             color: Colors.black,
                             fontSize: 17.0)),
-                    Container(  
-                      child: Text(
-                        subtitle,
-                        style: TextStyle(
-                            color: gris,
-                            fontWeight: FontWeight.w500,
-                            fontSize: 13.0),
-                      ),
+                    Text(
+                      subtitle,
+                      style: TextStyle(
+                          color: gris,
+                          fontWeight: FontWeight.w500,
+                          fontSize: 13.0),
                     ),
                     Row(
                       children: [
@@ -100,7 +98,7 @@ Widget popularesCard({
                                 fontSize: 11.0,
                               ),
                             ),
-                          ) : Text(''),
+                          ) : const Text(''),
                         )
                       ],
                     )

@@ -78,7 +78,7 @@ Widget _createTextFieldDate(BuildContext context) {
             Border(bottom: BorderSide(color: Theme.of(context).dividerColor))),
     child: ListTile(
       title: TextField(
-        keyboardType: TextInputType.text
+        keyboardType: TextInputType.text,
         decoration: InputDecoration(
             hintText: 'Date of birth',
             border: OutlineInputBorder(borderSide: BorderSide.none)),

@@ -2,7 +2,6 @@ import 'package:agachaditos_app/src/colors/colors.dart';
 import 'package:agachaditos_app/src/features/presentacion/commons_widgets/BackButons/back_button.dart';
 import 'package:agachaditos_app/src/features/presentacion/commons_widgets/Headers/header_double.dart';
 import 'package:agachaditos_app/src/features/presentacion/commons_widgets/Headers/header_text.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
 
@@ -33,14 +32,14 @@ class PlaceDetailPage extends StatelessWidget {
             flexibleSpace: FlexibleSpaceBar(
               background: Stack(
                 children: [
-                  Image(
+                  const Image(
                       width: double.infinity,
                       fit: BoxFit.cover,
                       height: 350,
                       image: NetworkImage(
                           'https://images.unsplash.com/photo-1561758033-d89a9ad46330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80')),
                   Container(
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                         color: Color.fromRGBO(0, 0, 0, 1.5),
                       ),
                       width: double.infinity,
@@ -87,7 +86,7 @@ class PlaceDetailPage extends StatelessWidget {
             _reviews(),
             _headrs(texto: 'YourRating'),
             _yourRating(),
-            SizedBox(height: 150.0),
+            const SizedBox(height: 150.0),
           ]))
         ],
       ),

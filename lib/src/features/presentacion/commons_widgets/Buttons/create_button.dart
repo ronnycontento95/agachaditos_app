@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 Widget createButton({
-  BuildContext? context,
+  required BuildContext context,
   double width = 350.0,
   double height = 45.0,
   double radius = 20.0,
@@ -9,15 +9,15 @@ Widget createButton({
   ImageProvider<Object>? icon,
   required Color color,
   required String labelButton,
-  required Function func,
+  Function()? func,
 }) {
   return Container(
       width: width,
       height: height,
       margin: const EdgeInsets.only(top: 20.0),
-      child: isWithIcon
-          ? _raisedButtonWithIcon(radius, icon!, labelButton, color, func)
-          : _raisedButtonNotIcon(radius, labelButton, color, func));
+      child: isWithIcon && icon !=null
+          ? _raisedButtonWithIcon(radius, icon, labelButton, color, func!)
+          : _raisedButtonNotIcon(radius, labelButton, color, func!));
 }
 
 Widget _raisedButtonWithIcon(double radius, ImageProvider<Object> icon,
@@ -39,7 +39,7 @@ Widget _raisedButtonWithIcon(double radius, ImageProvider<Object> icon,
           margin: const EdgeInsets.only(left: 10),
           child: Text(
             labelButton,
-            style: TextStyle(color: Colors.white, fontSize: 15.0),
+            style: const  TextStyle(color: Colors.white, fontSize: 15.0),
           ),
         ),
       ],
@@ -64,7 +64,7 @@ Widget _raisedButtonNotIcon(double radius, String labelButton, Color color, Func
           margin: const EdgeInsets.only(left: 10),
           child: Text(
             labelButton,
-            style: TextStyle(color: Colors.white, fontSize: 15.0),
+            style: const  TextStyle(color: Colors.white, fontSize: 15.0),
           ),
         ),
       ],
