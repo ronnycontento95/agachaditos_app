@@ -65,7 +65,7 @@ class LoginPage extends StatelessWidget {
                       ),
                       _emailInput(),
                       _passwordInput(),
-                        createButton(color: redColorPrimary, labelButton: 'Log  in', func: (){
+                        createButton( context: context, color: redColorPrimary, labelButton: 'Log  in', func: (){
                           Navigator.pushNamed(context, 'tabs');
                         }),
                       Container(

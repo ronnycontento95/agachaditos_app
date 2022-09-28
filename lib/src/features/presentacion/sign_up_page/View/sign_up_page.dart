@@ -33,7 +33,7 @@ class SignUp extends StatelessWidget {
               _phoneInput(context),
               _dateInput(context),
               _passwordInput(context),
-             createButton(color: redColorPrimary, labelButton: 'Sing Up', func: (){
+             createButton(context: context, color: redColorPrimary, labelButton: 'Sing Up', func: (){
               Navigator.pushNamed(context, 'login');
              }),
               Container(

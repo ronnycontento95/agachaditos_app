@@ -51,12 +51,14 @@ class WelcomePage extends StatelessWidget {
             ),
           ),
           createButton(
+            context: context,
               color: redColorPrimary,
               labelButton: 'Log in',
               func: () {
                 Navigator.pushNamed(context, 'login');
               }),
           createButton(
+            context: context,
               isWithIcon: true,
               icon: AssetImage("assets/icons/facebook.png"),
               color: colorfacebook,

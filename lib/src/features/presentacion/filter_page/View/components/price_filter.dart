@@ -1,5 +1,4 @@
 import 'package:agachaditos_app/src/colors/colors.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class PriceFilter extends StatefulWidget {
@@ -11,7 +10,7 @@ class PriceFilter extends StatefulWidget {
 
 class _PriceFilterState extends State<PriceFilter> {
   //Propiedad
-  RangeValues _values = RangeValues(0.3, 1.5);
+  RangeValues _values = const RangeValues(0.3, 1.5);
   int _minPrize = 0;
   int _maxPrize = 0;
 
@@ -24,7 +23,7 @@ class _PriceFilterState extends State<PriceFilter> {
           '$_minPrize UST',
           style: const TextStyle(fontSize: 16),
         ),
-        Container(
+        SizedBox(
           width: 300,
           child: RangeSlider(
             activeColor: redColorPrimary,
@@ -43,7 +42,7 @@ class _PriceFilterState extends State<PriceFilter> {
         ),
         Text(
           '$_maxPrize UST',
-          style: TextStyle(fontSize: 16),
+          style: const TextStyle(fontSize: 16),
         ),
       ],
     );

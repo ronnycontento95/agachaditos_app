@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -16,7 +18,7 @@ class MyApp extends StatelessWidget {
         buttonColor: Color.fromRGBO(0, 122, 255, 1.0),
         disabledColor: Color.fromRGBO(142, 142, 147, 1),
         scaffoldBackgroundColor: Colors.white,
-        appBarTheme: AppBarTheme(
+        appBarTheme: const  AppBarTheme(
           iconTheme: IconThemeData(
             color: Colors.black
           )

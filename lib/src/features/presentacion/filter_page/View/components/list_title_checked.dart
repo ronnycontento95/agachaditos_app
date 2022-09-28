@@ -6,7 +6,7 @@ import 'package:agachaditos_app/src/features/presentacion/commons_widgets/Header
 
 class ListTileChecked extends StatefulWidget {
   String texto;
-  Function func;
+  Function()? func;
   bool isActive;
   ListTileChecked(
       {Key? key,
@@ -38,14 +38,14 @@ Widget listTiles(
     {required BuildContext context,
     texto = String,
     isActive = bool,
-    required Function func}) {
+    required Function()? func}) {
   return Container(
     height: 40,
     decoration: BoxDecoration(
         border:
             Border(bottom: BorderSide(color: Theme.of(context).dividerColor))),
     child: ListTile(
-      onTap: func(),
+      onTap: func!(),
       title: headerText(
           texto: texto,
           color: isActive ? redColorPrimary : Colors.black,
@@ -56,7 +56,7 @@ Widget listTiles(
               Icons.check,
               color: isActive ? redColorPrimary : gris,
             )
-          : Text(''),
+          : const Text(''),
     ),
   );
 }

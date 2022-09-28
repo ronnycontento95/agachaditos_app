@@ -84,7 +84,7 @@ void _showAlert(BuildContext context) {
       AssetImage('assets/icons/lock.png'),
       "Your password has been reset",
       "'You'll shortle receive an email with a code to setup a new password ",
-      createButton(color: redColorPrimary, labelButton: 'Done', func: () {
+      createButton(context: context, color: redColorPrimary, labelButton: 'Done', func: () {
         Navigator.pushNamed(context, 'login');
       }));
 }

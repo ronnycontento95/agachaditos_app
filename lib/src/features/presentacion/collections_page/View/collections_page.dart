@@ -1,6 +1,5 @@
 import 'package:agachaditos_app/src/features/presentacion/commons_widgets/Headers/header_text.dart';
 import 'package:agachaditos_app/src/features/presentacion/widgets/back_button.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class CollectionsPage extends StatelessWidget {
@@ -67,7 +66,7 @@ Widget _card(BuildContext context) {
           margin: const EdgeInsets.all(5),
 
           decoration: BoxDecoration(
-              color: Color.fromRGBO(0, 0, 0, 1.3),
+              color:  const Color.fromRGBO(0, 0, 0, 1.3),
               borderRadius: BorderRadius.circular(10)),
         ),
         Container(
